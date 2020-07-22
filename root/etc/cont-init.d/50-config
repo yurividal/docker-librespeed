@@ -4,9 +4,23 @@
 mkdir -p \
 	/config/www
 
+mkdir -p \
+	/config/results
+
+mkdir -p \
+	/usr/share/webapps/librespeed/img
+
 # create symlink to index.html
 [[ ! -L /usr/share/webapps/librespeed/index.html ]] && \
 	ln -s /config/www/index.html /usr/share/webapps/librespeed/index.html
+
+# create symlink to index.php for customizing the results image
+[[ ! -L /usr/share/webapps/librespeed/results/index.php ]] && \
+	ln -s /config/results/index.php /usr/share/webapps/librespeed/results/index.php
+
+# create symlink to images folder for logos and favicions
+[[ ! -L /usr/share/webapps/librespeed/img ]] && \
+	ln -s /config/img /usr/share/webapps/librespeed/img
 
 # update templates
 cp /usr/share/webapps/librespeed/example*.html /config/www/
