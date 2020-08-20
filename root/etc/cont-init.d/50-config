@@ -10,9 +10,9 @@ mkdir -p \
 mkdir -p \
 	/config/img
 
-# create symlink to index.html
-[[ ! -L /usr/share/webapps/librespeed/index.html ]] && \
-	ln -s /config/www/index.html /usr/share/webapps/librespeed/index.html
+# create symlink to index.php
+[[ ! -L /usr/share/webapps/librespeed/index.php ]] && \
+	ln -s /config/www/index.php /usr/share/webapps/librespeed/index.php
 
 # create symlink to index.php for customizing the results image
 [[ ! -L /usr/share/webapps/librespeed/results/index.php ]] && \
